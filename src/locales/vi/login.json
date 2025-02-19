@@ -1,0 +1,15 @@
+{
+  "login": "Đăng Nhập",
+  "username": "Tên đăng nhập",
+  "password": "Mật khẩu",
+  "remember me": "Ghi nhớ",
+  "forget password": "Quên mật khẩu",
+  "not have account": "Bạn chưa có tài khoản",
+  "register": "Đăng ký",
+  "language": "Ngôn ngữ",
+  "type username": "Nhập tên đăng nhập",
+  "type password": "Nhập tên mật khẩu",
+  "username required": "Vui lòng nhập tên đăng nhập",
+  "password required": "Vui lòng nhập mật khẩu",
+  "email error": "Vui lòng nhập email hợp lệ"
+}

@@ -1,0 +1,13 @@
+{
+  "register": "Đăng Ký",
+  "fullname": "Họ và tên",
+  "password": "Mật khẩu",
+  "age": "Tuổi",
+  "gender": "Giới tính",
+  "address": "Địa chỉ",
+  "sign up": "Đăng ký",
+  "male": "Nam",
+  "female": "Nữ",
+  "other": "Khác",
+  "language": "Ngôn ngữ"
+}

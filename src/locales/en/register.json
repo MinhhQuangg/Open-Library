@@ -1,0 +1,13 @@
+{
+  "register": "Register",
+  "fullname": "Fullname",
+  "password": "Password",
+  "age": "Age",
+  "gender": "Gender",
+  "address": "Address",
+  "sign up": "Sign up",
+  "male": "Male",
+  "female": "Female",
+  "other": "Other",
+  "language": "Language"
+}

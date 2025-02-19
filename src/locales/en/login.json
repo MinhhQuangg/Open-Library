@@ -1,0 +1,15 @@
+{
+  "login": "Login",
+  "username": "Username",
+  "password": "Password",
+  "remember me": " Remember Me",
+  "forget password": "Forget Password",
+  "not have account": "Don't have an account",
+  "register": "Register",
+  "language": "Language",
+  "type username": "Enter username",
+  "type password": "Enter password",
+  "username required": "Username is required",
+  "password required": "Password is required",
+  "email error": "Username must be a valid email"
+}
