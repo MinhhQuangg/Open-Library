@@ -23,15 +23,15 @@ export const Routes = () => {
       <RouteComponent>
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route element={<RequireAuth />}>
-          <Route path="/Home" element={<Home />} />
-          <Route path="/BookList/" element={<BookList />} />
-          <Route path="/books/:id" element={<BookDetails />} />
-          <Route path="/MyBook" element={<MyBook />} />
-          <Route path="/AddBook" element={<AddBook />} />
-          <Route path="/ShoppingCartBook" element={<ShoppingCartBook />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Route>
+        {/* <Route element={<RequireAuth />}> */}
+        <Route path="/Home" element={<Home />} />
+        <Route path="/BookList/" element={<BookList />} />
+        <Route path="/books/:id" element={<BookDetails />} />
+        <Route path="/MyBook" element={<MyBook />} />
+        <Route path="/AddBook" element={<AddBook />} />
+        <Route path="/ShoppingCartBook" element={<ShoppingCartBook />} />
+        <Route path="*" element={<PageNotFound />} />
+        {/* </Route> */}
         <Route path="/Unauthorized" element={<Unauthorized />} />
       </RouteComponent>
     </BrowserRouter>

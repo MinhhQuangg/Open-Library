@@ -4,7 +4,7 @@ import {
   Box,
   Button,
   FormControl,
-  Grid,
+  Grid2,
   MenuItem,
   Select,
   TextField,
@@ -77,16 +77,16 @@ export const Register = () => {
 
   return (
     <form>
-      <Grid
+      <Grid2
         container
         alignContent="center"
         justifyContent="center"
         m="0 auto"
         height="100vh"
       >
-        <Grid item xs={4.5} />
+        <Grid2 item xs={4.5} />
 
-        <Grid
+        <Grid2
           item
           xs={3}
           border="2px solid lightblack"
@@ -277,9 +277,9 @@ export const Register = () => {
               </Button>
             </Box>
           </Box>
-        </Grid>
-        <Grid item xs={4.5} />
-      </Grid>
+        </Grid2>
+        <Grid2 item xs={4.5} />
+      </Grid2>
     </form>
   );
 };

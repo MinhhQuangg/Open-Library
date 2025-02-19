@@ -35,18 +35,17 @@ export class UserService {
       const res = await instance.get(
         `/books/search?title=${data}&author=null&publisher=null`
       );
+      console.log(res.data);
       return res.data?.data;
     } catch (error) {
       showToastError(error.response?.data?.message);
       console.log("error:", error);
     }
   };
-  static getBooks = async (num, size) => {
+  static getBooks = async () => {
     try {
-      const res = await instance.get(
-        `/books?pageNumber=${num}&pageSize=${size}`
-      );
-      return res.data?.data || {};
+      const res = await instance.get(`/search/authors.json?q=j`);
+      return res.data?.docs || {};
     } catch (error) {
       showToastError(error.response?.data?.message);
       return [];

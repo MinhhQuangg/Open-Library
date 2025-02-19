@@ -2,7 +2,7 @@ import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 
 export const instance = axios.create({
-  baseURL: "http://10.66.7.56:8080/api/v1",
+  baseURL: "https://openlibrary.org",
   timeout: 100000,
   headers: {
     "Content-Type": "application/json",

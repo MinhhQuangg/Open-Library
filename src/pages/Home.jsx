@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid2, Typography } from "@mui/material";
 import React, { useEffect } from "react";
 import { Footer } from "../components/Footer";
 import { GenreList } from "../components/GenreList";
@@ -92,7 +92,7 @@ export const Home = () => {
   const { data, isLoading } = useQuery({
     queryKey: ["getBooks"],
     queryFn: () => {
-      const response = UserService.getBooks(1, 10);
+      const response = UserService.getBooks();
       return response || {};
     },
   });
@@ -106,7 +106,8 @@ export const Home = () => {
 
   useEffect(() => {
     document.title = "Home | Library";
-  }, []);
+    console.log(data);
+  }, [data]);
 
   return (
     <Box sx={{ backgroundColor: "	#F0F0F0" }}>
@@ -134,14 +135,14 @@ export const Home = () => {
           WELCOME TO LIBRARY
         </Typography>
       </Box>
-      <Grid
+      <Grid2
         container
         margin=" 20px auto"
         sx={{
           width: "80%",
         }}
       >
-        <Grid
+        <Grid2
           item
           xs={12}
           marginTop="30px"
@@ -163,16 +164,16 @@ export const Home = () => {
           {!isLoading && (
             <Box>
               <BasicCarousel>
-                {data.result &&
-                  data.result.map((book) => (
+                {data &&
+                  data.map((book, index) => (
                     <Box
                       textAlign=" center"
                       fontFamily="arial"
                       margin="0 10px"
-                      key={book.id}
+                      key={index}
                     >
-                      <Grid container>
-                        <Grid item xs={12} paddingTop="5px">
+                      <Grid2 container>
+                        <Grid2 item xs={12} paddingTop="5px">
                           <Box
                             padding="10px"
                             boxShadow="0 0 10px rgba(0, 0, 0, 0.2)"
@@ -182,7 +183,7 @@ export const Home = () => {
                               style={{ color: "black", textDecoration: "none" }}
                             >
                               <img
-                                src={`data:image/jpeg;base64,${book.imgBase64}`}
+                                src={`https://covers.openlibrary.org/a/olid/${book.key}-M.jpg`}
                                 alt={book.title}
                                 width="75%"
                                 height="200%"
@@ -200,15 +201,15 @@ export const Home = () => {
                               {book.authors}
                             </Box>
                           </Box>
-                        </Grid>
-                      </Grid>
+                        </Grid2>
+                      </Grid2>
                     </Box>
                   ))}
               </BasicCarousel>
             </Box>
           )}
-        </Grid>
-        <Grid
+        </Grid2>
+        <Grid2
           item
           xs={12}
           marginTop="30px"
@@ -227,8 +228,8 @@ export const Home = () => {
             </MUILink>
           </Typography>
           <GenreList genres={genres} />
-        </Grid>
-      </Grid>
+        </Grid2>
+      </Grid2>
       <Footer />
     </Box>
   );
